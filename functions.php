@@ -166,3 +166,12 @@ if ( ! function_exists( 'airvice_setup' ) ) :
         }
     }
     add_action( 'wp_enqueue_scripts', 'airvice_theme_scripts' );
+
+    function airvice_kirki(){
+        if ( class_exists( 'Kirki' ) ) {
+            require_once('inc/airvice-kirki.php');
+        }
+    }
+    add_action( 'init', 'airvice_kirki' );
+
+    
