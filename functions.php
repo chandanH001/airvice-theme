@@ -148,14 +148,17 @@ if ( ! function_exists( 'airvice_setup' ) ) :
         wp_enqueue_style( 'style', get_stylesheet_uri() );
     
         // js files 
-        wp_enqueue_script( 'bootstrap-bundle', get_template_directory_uri() . '/assets/js/bootstrap-bundle.js', array( 'jquery' ), 1.1, true );
-        wp_enqueue_script( 'wow', get_template_directory_uri() . '/assets/js/wow.js', array( 'jquery' ), 1.1, true );
-        wp_enqueue_script( 'swiper-bundle', get_template_directory_uri() . '/assets/js/swiper-bundle.js', array( 'jquery' ), 1.1, true );
-        wp_enqueue_script( 'waypoints', get_template_directory_uri() . '/assets/js/waypoints.js', array( 'jquery' ), 1.1, true );
-        wp_enqueue_script( 'purecounter', get_template_directory_uri() . '/assets/js/purecounter.js', array( 'jquery' ), 1.1, true );
-        wp_enqueue_script( 'magnific-popup', get_template_directory_uri() . '/assets/js/magnific-popup.js', array( 'jquery' ), 1.1, true );
-        wp_enqueue_script( 'slick', get_template_directory_uri() . '/assets/js/slick.js', array( 'jquery' ), 1.1, true );
-        wp_enqueue_script( 'isotope-pkgd', get_template_directory_uri() . '/assets/js/isotope-pkgd.js', array( 'imagesloaded' ), 1.1, true );
+        wp_enqueue_script( 'bootstrap-bundle', get_template_directory_uri() . '/assets/js/bootstrap.bundle.min.js', array( 'jquery' ), 1.1, true );
+        wp_enqueue_script( 'vendor-jquery', get_template_directory_uri() . '/assets/js/vendor/jquery.min.js', array( 'jquery' ), 1.1, true );
+        wp_enqueue_script( 'slick', get_template_directory_uri() . '/assets/js/slick.min.js', array( 'jquery' ), 1.1, true );
+        wp_enqueue_script( 'isotope-pkgd', get_template_directory_uri() . '/assets/js/isotope.pkgd.min.js', array( 'imagesloaded' ), 1.1, true );
+        wp_enqueue_script( 'swiper', get_template_directory_uri() . '/assets/js/swiper-bundle.js', array( '' ), 1.1, true );
+        wp_enqueue_script( 'venobox', get_template_directory_uri() . '/assets/js/venobox.min.js', array( '' ), 1.1, true );
+        wp_enqueue_script( 'backToTop', get_template_directory_uri() . '/assets/js/backToTop.js', array( '' ), 1.1, true );
+        wp_enqueue_script( 'meanmenu', get_template_directory_uri() . '/assets/js/jquery.meanmenu.min.js', array( 'jquery' ), 1.1, true );
+        wp_enqueue_script( 'imagesloaded', get_template_directory_uri() . '/assets/js/imagesloaded.pkgd.min.js', array( '' ), 1.1, true );
+        wp_enqueue_script( 'ajax', get_template_directory_uri() . '/assets/js/ajax-form.js', array( '' ), 1.1, true );
+        wp_enqueue_script( 'wow', get_template_directory_uri() . '/assets/js/wow.min.js', array( '' ), 1.1, true );
         wp_enqueue_script( 'airvice-main', get_template_directory_uri() . '/assets/js/main.js', array( 'jquery' ), 1.1, true );
     
         if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
