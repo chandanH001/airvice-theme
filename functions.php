@@ -86,16 +86,6 @@ if ( ! function_exists( 'airvice_setup' ) ) :
 
 
         register_sidebar( array(
-            'name'          => __( 'Services Sidebar', 'airvice' ),
-            'id'            => 'services-sidebar',
-            'description'   => __( 'This widgets will display in blog sidebar', 'airvice' ),
-            'before_widget' => '<div id="%1$s" class="tp-service-sidebar-content mb-40 %2$s">',
-            'after_widget'  => '</div>',
-            'before_title'  => '<h4 class="tp-service-sidebar-title">',
-            'after_title'   => '</h4>',
-        ) );
-
-        register_sidebar( array(
             'name'          => __( 'Footer Widget 01', 'airvice' ),
             'id'            => 'footer-widget-1',
             'description'   => __( 'This widgets will display in footer widget 01', 'airvice' ),
@@ -143,15 +133,18 @@ if ( ! function_exists( 'airvice_setup' ) ) :
     function airvice_theme_scripts() {
         
         // css files 
-        wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.css', array(), '5.2.3', 'all' );
-        wp_enqueue_style( 'swiper-bundle', get_template_directory_uri() . '/assets/css/swiper-bundle.css', array(), '8.2.2', 'all' );
-        wp_enqueue_style( 'magnific-popup', get_template_directory_uri() . '/assets/css/magnific-popup.css', array(), '1.0', 'all' );
-        wp_enqueue_style( 'font-awesome-pro', get_template_directory_uri() . '/assets/css/font-awesome-pro.css', array(), '1.0', 'all' );
-        wp_enqueue_style( 'airvice-spacing', get_template_directory_uri() . '/assets/css/spacing.css', array(), '1.0', 'all' );
-        wp_enqueue_style( 'animate', get_template_directory_uri() . '/assets/css/animate.css', array(), '1.0', 'all' );
-        wp_enqueue_style( 'nice-select', get_template_directory_uri() . '/assets/css/nice-select.css', array(), '1.0', 'all' );
+        wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), '5.2.3', 'all' );
+        wp_enqueue_style( 'animate', get_template_directory_uri() . '/assets/css/animate.min.css', array(), '8.2.2', 'all' );
+        wp_enqueue_style( 'custom-animate', get_template_directory_uri() . '/assets/css/custom-animation.css', array(), '1.0', 'all' );
+        wp_enqueue_style( 'font-awesome-pro', get_template_directory_uri() . '/assets/css/fontawesome.min.css', array(), '1.0', 'all' );
+        wp_enqueue_style( 'mainmenu', get_template_directory_uri() . '/assets/css/meanmenu.css', array(), '1.0', 'all' );
+        wp_enqueue_style( 'flaticon', get_template_directory_uri() . '/assets/css/flaticon.css', array(), '1.0', 'all' );
+        wp_enqueue_style( 'venobox', get_template_directory_uri() . '/assets/css/venobox.min.css', array(), '1.0', 'all' );
+        wp_enqueue_style( 'back-top', get_template_directory_uri() . '/assets/css/backToTop.css', array(), '1.0', 'all' );
         wp_enqueue_style( 'slick', get_template_directory_uri() . '/assets/css/slick.css', array(), '1.0', 'all' );
-        wp_enqueue_style( 'airvice-main', get_template_directory_uri() . '/assets/css/main.css', array(), '1.0', 'all' );
+        wp_enqueue_style( 'swiper', get_template_directory_uri() . '/assets/css/swiper-bundle.css', array(), '1.0', 'all' );
+        wp_enqueue_style( 'default', get_template_directory_uri() . '/assets/css/default.css', array(), '1.0', 'all' );
+        wp_enqueue_style( 'main', get_template_directory_uri() . '/assets/css/main.css', array(), '1.0', 'all' );
         wp_enqueue_style( 'style', get_stylesheet_uri() );
     
         // js files 
