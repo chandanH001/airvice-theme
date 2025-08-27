@@ -13,45 +13,7 @@
                 <div class="col-xxl-6 col-xl-8 col-lg-6 col-4">
                     <div class="main-menu d-none d-lg-block">
                         <nav id="mobile-menu">
-                            <ul>
-                                <li class="menu-item-has-children"><a href="index.html">HOME</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="index.html">Home Style 1</a></li>
-                                        <li><a href="index-2.html">Home Style 2</a></li>
-                                        <li><a href="index-3.html">Home Style 3</a></li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item-has-children"><a href="service.html">SERVICES</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="service.html">Services</a></li>
-                                        <li><a href="service-details.html">Services Details</a></li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item-has-children"><a href="project.html">PROJECT</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="project.html">Project</a></li>
-                                        <li><a href="project-details.html">Project Details</a></li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item-has-children"><a href="#">PAGES</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="about.html">About</a></li>
-                                        <li><a href="choose.html">Why Choose</a></li>
-                                        <li><a href="team.html">Team</a></li>
-                                        <li><a href="team-details.html">Team Details</a></li>
-                                        <li><a href="price.html">Price</a></li>
-                                        <li><a href="faq.html">Faq</a></li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item-has-children"><a href="blog.html">Blog</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="blog.html">Blog Grid</a></li>
-                                        <li><a href="blog-sidebar.html">Blog Sidebar</a></li>
-                                        <li><a href="blog-details.html">Blog Details</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="contact.html">CONTACT</a></li>
-                            </ul>
+                            <?php airvice_main_menu();?>
                         </nav>
                     </div>
                     <div class="side-menu-icon d-lg-none text-end">
