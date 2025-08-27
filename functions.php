@@ -43,6 +43,7 @@ if ( ! function_exists( 'airvice_setup' ) ) :
         // This theme uses wp_nav_menu() in two locations.
         register_nav_menus( array(
             'main-menu' => __( 'Main Menu','airvice' ),
+            'footer-menu' => __( 'Footer Menu','airvice' ),
         ) );
     
         /*
@@ -173,5 +174,7 @@ if ( ! function_exists( 'airvice_setup' ) ) :
         }
     }
     add_action( 'init', 'airvice_kirki' );
+
+    require_once('inc/template-function.php');
 
     
