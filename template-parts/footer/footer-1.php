@@ -1,4 +1,4 @@
-<footer data-background="assets/img/footer/footer-bg.jpg">
+<footer data-background="<?php echo get_template_directory_uri();?>/assets/img/footer/footer-bg.jpg">
     <section class="footer-area pt-115 pb-90">
         <div class="container">
             <div class="row">

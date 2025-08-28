@@ -73,7 +73,7 @@ new \Kirki\Field\Text(
 
 // Header
 new \Kirki\Section(
-	'header-1',
+	'header_1',
 	[
 		'title'       => esc_html__( 'Header', 'airvice' ),
 		'description' => esc_html__( 'Header', 'airvice' ),
@@ -87,7 +87,52 @@ new \Kirki\Field\Image(
 		'settings'    => 'logo',
 		'label'       => esc_html__( 'Site Logo', 'airvice' ),
 		'description' => esc_html__( 'Select Site Logo', 'airvice' ),
-		'section'     => 'header-1',
+		'section'     => 'header_1',
 		'default'     => get_template_directory_uri(). '/assets/img/logo/logo.png',
+	]
+);
+
+new \Kirki\Field\Checkbox_Switch(
+	[
+		'settings'    => 'right_switch',
+		'label'       => esc_html__( 'Right Header Switch Enable or Disable', 'airvice' ),
+		'description' => esc_html__( 'Right Switch Enable or Disable', 'airvice' ),
+		'section'     => 'header_1',
+		'default'     => 'on',
+		'choices'     => [
+			'on'  => esc_html__( 'Enable', 'airvice' ),
+			'off' => esc_html__( 'Disable', 'airvice' ),
+		],
+	]
+);
+
+new \Kirki\Field\Text(
+	[
+		'settings' => 'phone_number',
+		'label'    => esc_html__( 'Phone Number', 'airvice' ),
+		'section'  => 'header_1',
+		'default'  => esc_html__( '02 (555) 520 890', 'airvice' ),
+		'priority' => 10,
+	]
+);
+
+new \Kirki\Field\Text(
+	[
+		'settings' => 'button_title',
+		'label'    => esc_html__( 'Button Title', 'airvice' ),
+		'section'  => 'header_1',
+		'default'  => esc_html__( 'Get Quote', 'airvice' ),
+		'priority' => 10,
+	]
+);
+
+
+new \Kirki\Field\URL(
+	[
+		'settings' => 'button_url',
+		'label'    => esc_html__( 'Button URL', 'airvice' ),
+		'section'  => 'header_1',
+		'default'  => 'https://yoururl.com/',
+		'priority' => 10,
 	]
 );
