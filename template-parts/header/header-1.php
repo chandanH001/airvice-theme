@@ -36,8 +36,9 @@
                         <ul class="z-index">
 
                             <?php if($right_phone) : ?>
-                            <li class="user__text"><span><i><img src="assets/img/icon/icon-man.png" class="img-fluid"
-                                            alt="img"></i><a
+                            <li class="user__text"><span><i><img
+                                            src="<?php echo get_template_directory_uri();?>/assets/img/icon/icon-man.png"
+                                            class="img-fluid" alt="img"></i><a
                                         href="tel:<?php echo esc_html( $right_phone );?>"><?php echo esc_html( $right_phone );?></a>
                                 </span></li>
                             <?php endif;?>

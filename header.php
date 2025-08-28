@@ -42,3 +42,4 @@
 
     <!-- header area start here -->
     <?php get_template_part('/template-parts/header/header-1')?>
+    <?php get_template_part('/template-parts/header/offcanvus')?>
