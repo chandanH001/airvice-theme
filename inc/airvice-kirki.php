@@ -37,7 +37,7 @@ new \Kirki\Field\Checkbox_Switch(
 new \Kirki\Field\Text(
 	[
 		'settings' => 'offer_note',
-		'label'    => esc_html__( 'Offer Note', 'airvice' ),
+		'label'    => esc_html__( 'Offer Note (Topbar & OffCanvas)', 'airvice' ),
 		'section'  => 'top_bar',
 		'default'  => esc_html__( 'We do not received extra charges', 'airvice' ),
 		'priority' => 10,
@@ -46,7 +46,7 @@ new \Kirki\Field\Text(
 new \Kirki\Field\Text(
 	[
 		'settings' => 'top_opening',
-		'label'    => esc_html__( 'Opening Day', 'airvice' ),
+		'label'    => esc_html__( 'Opening Day (Topbar & OffCanvas)', 'airvice' ),
 		'section'  => 'top_bar',
 		'default'  => esc_html__( 'Sunday to Thursday', 'airvice' ),
 		'priority' => 10,
@@ -55,7 +55,7 @@ new \Kirki\Field\Text(
 new \Kirki\Field\Text(
 	[
 		'settings' => 'top_address',
-		'label'    => esc_html__( 'Address', 'airvice' ),
+		'label'    => esc_html__( 'Address (Topbar & OffCanvas)', 'airvice' ),
 		'section'  => 'top_bar',
 		'default'  => esc_html__( '28/4 Palmal, London', 'airvice' ),
 		'priority' => 10,
@@ -64,7 +64,7 @@ new \Kirki\Field\Text(
 new \Kirki\Field\Text(
 	[
 		'settings' => 'top_email',
-		'label'    => esc_html__( 'Email', 'airvice' ),
+		'label'    => esc_html__( 'Email (Topbar & OffCanvas)', 'airvice' ),
 		'section'  => 'top_bar',
 		'default'  => esc_html__( 'info@sycho24.com', 'airvice' ),
 		'priority' => 10,
@@ -135,4 +135,53 @@ new \Kirki\Field\URL(
 		'default'  => 'https://yoururl.com/',
 		'priority' => 10,
 	]
+);
+
+//off canvus 
+new \Kirki\Section(
+	'offcanvus',
+	[
+		'title'       => esc_html__( 'Off Canvus', 'airvice' ),
+		'description' => esc_html__( 'Header', 'airvice' ),
+		'panel'       => 'airvice_options',
+		'priority'    => 160,
+	]
+);
+
+new \Kirki\Field\URL(
+    [
+        'settings' => 'fa_social_offcanvas',
+        'label'    => esc_html__('Facebook URL', 'solub'),
+        'section'  => 'offcanvus',
+        'default'  => 'https://facebook.com/',
+        'priority' => 10,
+    ]
+);
+new \Kirki\Field\URL(
+    [
+        'settings' => 'tw_social_offcanvas',
+        'label'    => esc_html__('Twitter URL', 'solub'),
+        'section'  => 'offcanvus',
+        'default'  => 'https://facebook.com/',
+        'priority' => 10,
+    ]
+);
+new \Kirki\Field\URL(
+    [
+        'settings' => 'ins_social_offcanvas',
+        'label'    => esc_html__('Instagram URL', 'solub'),
+        'section'  => 'offcanvus',
+        'default'  => 'https://instagram.com/',
+        'priority' => 10,
+    ]
+);
+
+new \Kirki\Field\URL(
+    [
+        'settings' => 'google_social_offcanvas',
+        'label'    => esc_html__('Google URL', 'solub'),
+        'section'  => 'offcanvus',
+        'default'  => 'https://google.com/',
+        'priority' => 10,
+    ]
 );

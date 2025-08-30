@@ -90,20 +90,20 @@ if ( ! function_exists( 'airvice_setup' ) ) :
             'name'          => __( 'Footer Widget 01', 'airvice' ),
             'id'            => 'footer-widget-1',
             'description'   => __( 'This widgets will display in footer widget 01', 'airvice' ),
-            'before_widget' => '<div id="%1$s" class="tp-footer-widget tp-footer-col-1 mb-50 %2$s">',
+            'before_widget' => '<div id="%1$s" class="footer__widget mb-30 wow fadeInUp %2$s">',
             'after_widget'  => '</div>',
-            'before_title'  => '<h3 class="tp-footer-widget-title">',
-            'after_title'   => '</h3>',
+            'before_title'  => '<h4 class="footer__widget--title">',
+            'after_title'   => '</h4>',
         ) );
 
         register_sidebar( array(
             'name'          => __( 'Footer Widget 02', 'airvice' ),
             'id'            => 'footer-widget-2',
             'description'   => __( 'This widgets will display in footer widget 02', 'airvice' ),
-            'before_widget' => '<div id="%1$s" class="tp-footer-widget tp-footer-col-2 mb-50 %2$s">',
+            'before_widget' => '<div id="%1$s" class="footer__widget mb-30 pl-30 wow fadeInUp %2$s" data-wow-delay=".9s" >',
             'after_widget'  => '</div>',
-            'before_title'  => '<h3 class="tp-footer-widget-title">',
-            'after_title'   => '</h3>',
+            'before_title'  => '<h4 class="footer__widget--title">',
+            'after_title'   => '</h4>',
         ) );
 
         register_sidebar( array(
@@ -112,8 +112,8 @@ if ( ! function_exists( 'airvice_setup' ) ) :
             'description'   => __( 'This widgets will display in footer widget 03', 'airvice' ),
             'before_widget' => '<div id="%1$s" class="tp-footer-widget tp-footer-col-3 mb-50 %2$s">',
             'after_widget'  => '</div>',
-            'before_title'  => '<h3 class="tp-footer-widget-title">',
-            'after_title'   => '</h3>',
+            'before_title'  => '<h4 class="footer__widget--title">',
+            'after_title'   => '</h4>',
         ) );
 
         register_sidebar( array(
@@ -122,8 +122,8 @@ if ( ! function_exists( 'airvice_setup' ) ) :
             'description'   => __( 'This widgets will display in footer widget 04', 'airvice' ),
             'before_widget' => '<div id="%1$s" class="tp-footer-widget tp-footer-col-4 mb-50 %2$s">',
             'after_widget'  => '</div>',
-            'before_title'  => '<h3 class="tp-footer-widget-title">',
-            'after_title'   => '</h3>',
+            'before_title'  => '<h4 class="footer__widget--title">',
+            'after_title'   => '</h4>',
         ) );
     }
     add_action( 'widgets_init', 'airvice_widgets_init' );
