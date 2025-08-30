@@ -1,5 +1,7 @@
 <?php 
-$copyright_footer= get_theme_mod( 'copyright', '<span>Copyright © 2021 <a href="#">Theme_pure</a>. All Rights Reserved.</span>')
+$copyright_footer= get_theme_mod( 'copyright', '<span>Copyright © 2021 <a href="#">Theme_pure</a>. All Rights Reserved.</span>');
+$social_link_icon= get_theme_mod('social_repeater');
+
 
 ?>
 
@@ -33,10 +35,8 @@ $copyright_footer= get_theme_mod( 'copyright', '<span>Copyright © 2021 <a href=
                 </div>
                 <div class="col-md-5">
                     <div class="copyright__social text-end">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-google"></i></a>
+
+                        <?php render_airvice_socal();?>
                     </div>
                 </div>
             </div>

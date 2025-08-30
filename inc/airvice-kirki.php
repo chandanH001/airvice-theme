@@ -207,3 +207,52 @@ new \Kirki\Field\Text(
 		'priority' => 10,
 	]
 	);
+
+	// footer social 
+
+	new \Kirki\Field\Repeater(
+	[
+		'settings' => 'social_repeater',
+		'label'    => esc_html__( 'Social Link', 'airvice' ),
+		'section'  => 'footer_copyright',
+		'priority' => 10,
+		'default'  => [
+			[
+				'icon_class'   => esc_html__( 'fab fa-facebook-f', 'airvice' ),
+				'icon_url'    => 'https://www.facebook.com/',
+				'link_target' => '_self',
+			
+			],
+			[
+				'icon_class'   => esc_html__( 'fab fa-twitter', 'airvice' ),
+				'icon_url'    => 'https://www.x.com/',
+				'link_target' => '_blank',
+				
+			],
+		],
+		'fields'   => [
+			'icon_class'   => [
+				'type'        => 'text',
+				'label'       => esc_html__( 'Icon Class', 'airvice' ),
+				'description' => esc_html__( 'Description', 'airvice' ),
+				'default'     => 'fab fa-facebook-f',
+			],
+			'icon_url'    => [
+				'type'        => 'text',
+				'label'       => esc_html__( 'Social URL', 'airvice' ),
+				'description' => esc_html__( 'Enter Socila Link', 'airvice' ),
+				'default'     => 'https://www.facebook.com/',
+			],
+			'link_target' => [
+				'type'        => 'select',
+				'label'       => esc_html__( 'Link Target', 'airvice' ),
+				'description' => esc_html__( 'Link Target', 'airvice' ),
+				'default'     => '_self',
+				'choices'     => [
+					'_blank' => esc_html__( 'New Window', 'airvice' ),
+					'_self'  => esc_html__( 'Same Frame', 'airvice' ),
+				],
+			],
+		],
+	]
+);

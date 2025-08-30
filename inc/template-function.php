@@ -198,6 +198,30 @@ function register_airvice_contact_widget() {
 }
 add_action('widgets_init', 'register_airvice_contact_widget');
 
+// Footer Social 
+    function render_airvice_socal()
+    {
+        $footer_socials = get_theme_mod('social_repeater');
+
+        if (! empty($footer_socials) && is_array($footer_socials)) {
+            foreach ($footer_socials as $footer_social) {
+                $icon_class  = ! empty($footer_social['icon_class']) ? esc_attr($footer_social['icon_class']) : '';
+                $ft_social_url    = ! empty($footer_social['icon_url']) ? esc_url($footer_social['icon_url']) : '';
+
+                // Skip any incomplete data
+                if ($icon_class && $ft_social_url) {
+                    echo ' <a href="'. $ft_social_url .'"><i class="' . $icon_class . '"></i></a>';
+
+                }
+            }
+        }
+    }
+
+
+
+
+
+
  /**
      * Sanitize SVG markup for front-end display.
      *
