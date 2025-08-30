@@ -1,3 +1,8 @@
+<?php 
+$copyright_footer= get_theme_mod( 'copyright', '<span>Copyright © 2021 <a href="#">Theme_pure</a>. All Rights Reserved.</span>')
+
+?>
+
 <footer data-background="<?php echo get_template_directory_uri();?>/assets/img/footer/footer-bg.jpg">
     <section class="footer-area pt-115 pb-90">
         <div class="container">
@@ -21,7 +26,9 @@
             <div class="row align-items-center">
                 <div class="col-md-7">
                     <div class="copyright__text">
-                        <span>Copyright © 2021 <a href="#">Theme_pure</a>. All Rights Reserved.</span>
+
+                        <?php echo airvice_kses($copyright_footer);?>
+
                     </div>
                 </div>
                 <div class="col-md-5">

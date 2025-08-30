@@ -151,7 +151,7 @@ new \Kirki\Section(
 new \Kirki\Field\URL(
     [
         'settings' => 'fa_social_offcanvas',
-        'label'    => esc_html__('Facebook URL', 'solub'),
+        'label'    => esc_html__('Facebook URL', 'airvice'),
         'section'  => 'offcanvus',
         'default'  => 'https://facebook.com/',
         'priority' => 10,
@@ -160,7 +160,7 @@ new \Kirki\Field\URL(
 new \Kirki\Field\URL(
     [
         'settings' => 'tw_social_offcanvas',
-        'label'    => esc_html__('Twitter URL', 'solub'),
+        'label'    => esc_html__('Twitter URL', 'airvice'),
         'section'  => 'offcanvus',
         'default'  => 'https://facebook.com/',
         'priority' => 10,
@@ -169,7 +169,7 @@ new \Kirki\Field\URL(
 new \Kirki\Field\URL(
     [
         'settings' => 'ins_social_offcanvas',
-        'label'    => esc_html__('Instagram URL', 'solub'),
+        'label'    => esc_html__('Instagram URL', 'airvice'),
         'section'  => 'offcanvus',
         'default'  => 'https://instagram.com/',
         'priority' => 10,
@@ -179,9 +179,31 @@ new \Kirki\Field\URL(
 new \Kirki\Field\URL(
     [
         'settings' => 'google_social_offcanvas',
-        'label'    => esc_html__('Google URL', 'solub'),
+        'label'    => esc_html__('Google URL', 'airvice'),
         'section'  => 'offcanvus',
         'default'  => 'https://google.com/',
         'priority' => 10,
     ]
 );
+
+// Footer Copyright and Social icon
+
+new \Kirki\Section(
+	'footer_copyright',
+	[
+		'title'       => esc_html__( 'Footer', 'airvice' ),
+		'description' => esc_html__( 'Footer', 'airvice' ),
+		'panel'       => 'airvice_options',
+		'priority'    => 160,
+	]
+);
+
+new \Kirki\Field\Text(
+	[
+		'settings' => 'copyright',
+		'label'    => esc_html__( 'Copyright Text', 'airvice' ),
+		'section'  => 'footer_copyright',
+		'default'  => airvice_kses ( '<span>Copyright © 2021 <a href="#">Theme_pure</a>. All Rights Reserved.</span>', 'airvice' ),
+		'priority' => 10,
+	]
+	);
