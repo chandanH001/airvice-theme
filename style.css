@@ -15,3 +15,7 @@ Text Domain: airvice
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
+
+.avatar.avatar-50.photo.img-fluid {
+    border-radius: 50% !important;
+}

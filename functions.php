@@ -146,8 +146,13 @@ if ( ! function_exists( 'airvice_setup' ) ) :
         wp_enqueue_style( 'swiper', get_template_directory_uri() . '/assets/css/swiper-bundle.css', array(), '1.0', 'all' );
         wp_enqueue_style( 'default', get_template_directory_uri() . '/assets/css/default.css', array(), '1.0', 'all' );
         wp_enqueue_style( 'main', get_template_directory_uri() . '/assets/css/main.css', array(), '1.0', 'all' );
-        wp_enqueue_style( 'style', get_stylesheet_uri() );
-    
+                // wp_enqueue_style( 'style', get_stylesheet_uri() );
+                function airvice_enqueue_styles() {
+                // Load main theme stylesheet
+                wp_enqueue_style( 'style', get_stylesheet_uri(), array(), filemtime( get_stylesheet_directory() . '/style.css' ) );
+                }
+                add_action( 'wp_enqueue_scripts', 'airvice_enqueue_styles', 20 );
+            
         // js files 
         wp_enqueue_script( 'bootstrap-bundle', get_template_directory_uri() . '/assets/js/bootstrap.bundle.min.js', array( 'jquery' ), 1.1, true );
         wp_enqueue_script( 'vendor-jquery', get_template_directory_uri() . '/assets/js/vendor/jquery.min.js', array( 'jquery' ), 1.1, true );
