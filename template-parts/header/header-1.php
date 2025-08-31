@@ -1,6 +1,6 @@
 <header>
 
-    <?php get_template_part('/template-parts/header/topbar')?>
+    <?php get_template_part('/template-parts/header/topbar-1')?>
     <?php 
     $site_logo = get_theme_mod( 'logo', get_template_directory_uri(). '/assets/img/logo/logo.png');
     $right_header_switch = get_theme_mod( 'right_switch', 'on' );

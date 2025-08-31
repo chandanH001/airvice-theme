@@ -176,5 +176,3 @@ if ( ! function_exists( 'airvice_setup' ) ) :
     add_action( 'init', 'airvice_kirki' );
 
     require_once('inc/template-function.php');
-
-    

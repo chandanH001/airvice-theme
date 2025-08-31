@@ -217,7 +217,24 @@ add_action('widgets_init', 'register_airvice_contact_widget');
         }
     }
 
+// Breadcrumb Function for blog page 
 
+
+function airvice_breadcrumb_title() {
+    if ( is_home() && ! is_front_page() ) {
+        // Blog posts index page
+        echo get_the_title( get_option( 'page_for_posts' ) );
+    } elseif ( is_singular() ) {
+        // Single page, post, or custom post type
+        the_title();
+    } elseif ( is_archive() ) {
+        the_archive_title();
+    } elseif ( is_search() ) {
+        printf( __( 'Search Results for: %s', 'airvice' ), get_search_query() );
+    } elseif ( is_404() ) {
+        _e( 'Page Not Found', 'airvice' );
+    }
+}
 
 
 
