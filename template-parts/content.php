@@ -1,7 +1,6 @@
-<div class="ablog ablog-2 mb-30 wow fadeInUp" data-wow-delay=".3s">
+<article id="post-<?php the_ID(  );?>" <?php post_class('ablog ablog-2 mb-30 wow fadeInUp');?> data-wow-delay=".3s">
     <div class="ablog__img">
-        <?php the_post_thumbnail(); ?>
-    </div>
+        <?php the_post_thumbnail(); ?> </div>
     <div class="ablog__text ablog__text2">
         <div class="blog__date blog__date2">
             <h3 class="text-white"><?php echo get_the_date('d'); ?></h3>
@@ -52,4 +51,4 @@
             </div>
         </div>
     </div>
-</div>
+</article>

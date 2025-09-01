@@ -19,6 +19,22 @@ function change_widget_menu_class($args) {
 }
 add_filter('wp_nav_menu_args', 'change_widget_menu_class');
 
+// airvice_pagination 
+function airvice_pagination(){
+    $pages = paginate_links( array( 
+        'type' => 'array',
+        'prev_text'    => __('<i class="fal fa-long-arrow-left"></i>','harry'),
+        'next_text'    => __('<i class="fal fa-long-arrow-right"></i>','harry'),
+    ) );
+        if( $pages ) {
+        echo '<ul>';
+        foreach ( $pages as $page ) {
+            echo "<li>$page</li>";
+        }
+        echo '</ul>';
+    }
+}
+
 
 // Footer About us Widget
 class Footer_About_Widget extends WP_Widget {

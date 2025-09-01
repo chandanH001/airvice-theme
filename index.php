@@ -17,15 +17,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="basic-pagination mt-30 wow fadeInUp" data-wow-delay=".5s">
-                    <ul>
-                        <li><span aria-current="page" class="page-numbers current">1</span></li>
-                        <li><a class="page-numbers" href="#">2</a></li>
-                        <li><a class="page-numbers" href="#">3</a></li>
-                        <li><a class="next page-numbers" href="#">
-                                <i class="fal fa-long-arrow-right"></i>
-                            </a>
-                        </li>
-                    </ul>
+                    <?php airvice_pagination();?>
                 </div>
             </div>
         </div>
